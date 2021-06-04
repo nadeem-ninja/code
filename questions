@@ -1,0 +1,58 @@
+def list_sum(lists) :
+    total_sum = 0
+    for i in range(len(lists)) :
+        total_sum = total_sum + lists[i]
+    print(f'sum of the list  is {total_sum} :)')
+
+
+lists = [1 ,2 ,3 ,4 ,5 ,6]
+list_sum(lists)
+
+
+# find maximum number from the dictionary
+
+def dict_example(id_name ,id_score):
+    maximum_number = dict_id_score.values()
+    max_score = max(maximum_number)
+    key_of_max_score = max(id_score, key=id_score.get)
+    print({key_of_max_score : max_score})
+
+
+dict_id_username = {
+    "1": "Vivek",
+    "2": "Pradeep singh",
+    "3": "Sahil Sharma",
+    "4": "Ayaz Ali",
+    "5": "Mohd Nadeem",
+}
+
+dict_id_score = {
+    "1": 89,
+    "2": 90,
+    "3": 76,
+    "4": 77,
+    "5": 70,
+}
+
+dict_example(dict_id_username, dict_id_score)
+
+
+# maximum number in arrays in consecutive
+
+def getMaxLength(arr, n):
+    count = 0
+    res = 0
+    for i in range(0, n):
+        if arr[i] == 0:
+            count = 0
+        else :
+            count += 1
+            res = max(res, count)
+
+    return res
+
+
+arr = [1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1]
+n = len(arr)
+
+print(getMaxLength(arr ,n))
